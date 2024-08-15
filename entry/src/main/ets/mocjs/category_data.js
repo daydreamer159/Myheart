@@ -1,0 +1,35 @@
+const category=[
+  {
+    "icon":$r("app.media.heart1"),
+    "mytxt":"慈善捐赠"
+  },
+  {
+    "icon":$r("app.media.heart2"),
+    "mytxt":"爱佑新生"
+  },
+  {
+    "icon":$r("app.media.heart3"),
+    "mytxt":"公益捐助"
+  },
+  {
+    "icon":$r("app.media.heart4"),
+    "mytxt":"助学圆梦"
+  },
+  {
+    "icon":$r("app.media.heart5"),
+    "mytxt":"扶老助残"
+  },
+  {
+    "icon":$r("app.media.heart6"),
+    "mytxt":"慈善军营"
+  },
+  {
+    "icon":$r("app.media.heart7"),
+    "mytxt":"免费捐助"
+  },
+  {
+    "icon":$r("app.media.heart8"),
+    "mytxt":"突发事件"
+  },
+];
+export default category

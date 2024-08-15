@@ -1,0 +1,64 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "模块描述"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "myapp_username",
+      "value": "白日梦想家"
+    },
+    {
+      "name": "myuser_email",
+      "value": "输入账号或邮箱"
+    },
+    {
+      "name": "myuser_password",
+      "value": "输入密码"
+    },
+    {
+      "name": "mybutton_text",
+      "value": "立即登录"
+    },
+    {
+      "name": "register_text",
+      "value": "立即注册"
+    },
+    {
+      "name": "forget_text",
+      "value": "忘记密码"
+    },
+    {
+      "name": "nav_index",
+      "value": "首页"
+    },
+    {
+      "name": "nav_give",
+      "value": "捐助"
+    },
+    {
+      "name": "nav_car",
+      "value": "捐助岛"
+    },
+    {
+      "name": "nav_mine",
+      "value": "我的"
+    },
+    {
+      "name": "hot_text",
+      "value": "热门捐助"
+    },
+    {
+      "name": "jinqi_text",
+      "value": "近期捐赠"
+    }
+  ]
+}

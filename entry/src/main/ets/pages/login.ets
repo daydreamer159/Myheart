@@ -1,0 +1,102 @@
+import router from '@ohos.router'
+
+@Entry
+@Component
+struct Login{
+  @State username:string=""
+  @State password:string=""
+  build() {
+    Flex({direction:FlexDirection.Column,
+      alignItems:ItemAlign.Center}){
+      //第一个元素，图标和用户名
+      Flex(){
+        Flex({direction:FlexDirection.Column,
+          justifyContent:FlexAlign.Center,//水平居中
+          alignItems:ItemAlign.Center}){//垂直居中
+          Image($r("app.media.user"))
+            .width(150)
+            .height(150)
+            .borderRadius(75)
+            .margin({bottom:20})
+          Text($r("app.string.myapp_username"))
+            .fontColor(Color.White)
+            .fontSize(30)
+            .textAlign(TextAlign.Center)
+        }
+        .width("100%")
+      }
+      .width('100%')
+      .height(250)
+      .backgroundColor(Color.Red)
+      .borderRadius({bottomLeft:160,bottomRight:160})
+      //第二个元素，输入框邮箱
+    Flex({direction:FlexDirection.Row,
+      justifyContent:FlexAlign.Center,
+      alignItems:ItemAlign.Center}){
+        Image($r("app.media.user_icon"))
+          .width(60)
+        TextInput({placeholder:$r("app.string.myuser_email")})
+          .borderRadius({bottomLeft:0,topLeft:0})
+          .backgroundColor(Color.White)
+          .onChange((value)=>{
+            this.username=value
+          })
+    }
+    .width("90%")
+    .borderWidth(2)
+    .borderColor(Color.Gray)
+    .borderRadius(20)
+    .margin({top:40})
+      //第三个元素，输入框密码
+      Flex({direction:FlexDirection.Row,
+        justifyContent:FlexAlign.Center,
+        alignItems:ItemAlign.Center}){
+        Image($r("app.media.password_icon"))
+          .width(60)
+        TextInput({placeholder:$r("app.string.myuser_password")})
+          .type(InputType.Password)
+          .borderRadius({bottomLeft:0,topLeft:0})
+          .backgroundColor(Color.White)
+          .onChange((value)=>{
+            this.password=value
+          })
+      }
+      .width("90%")
+      .borderWidth(2)
+      .borderColor(Color.Gray)
+      .borderRadius(20)
+      .margin({top:40})
+      //第四个元素，立即登录
+      Button($r("app.string.mybutton_text"))
+        .width("60%")
+        .margin({top:40})
+        .backgroundColor(Color.Red)
+        .height(50)
+        .fontSize(20)
+        .onClick(()=>{
+          //登录页面不需要返回
+          if(this.username=="admin" && this.password=="123456")
+            router.replaceUrl({url:"pages/Index"})
+        })
+      //第五个元素，注册和忘记密码
+      Flex({direction:FlexDirection.Row,
+      justifyContent:FlexAlign.SpaceBetween}){
+        Text($r("app.string.register_text"))
+          .fontSize(20)
+          .fontColor(Color.White)
+          .onClick(()=>{
+            router.pushUrl({url:"pages/register"})
+          })
+        Text($r("app.string.forget_text"))
+          .fontSize(20)
+          .fontColor(Color.White)
+      }
+      .width("80%")
+      .margin({top:40})
+    }
+    .width("100%")
+    .height("110%")
+    .backgroundImage($r("app.media.bj"))//ImageRepeat.XY背景重复方法
+    .backgroundImageSize(ImageSize.FILL)//背景拉伸
+  }
+}
